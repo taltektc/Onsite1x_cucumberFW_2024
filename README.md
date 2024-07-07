@@ -1,7 +1,7 @@
 # Onsite1x_cucumberFW_2024
 Java, Cucumber BDD, Gherkin, CI/CD, GitHub, Maven, Git ect
 
-# Tools that are required
+# Tools that are required: https://talenttektraining.atlassian.net/wiki/spaces/AD/pages/951025684/Required+Tools+Java+Selenium+API
 - GitHub Account
 - Install Git
 - Java 17 or up
@@ -9,7 +9,7 @@ Java, Cucumber BDD, Gherkin, CI/CD, GitHub, Maven, Git ect
 - Install Maven
 - IDE: IntelliJ Community Edition (FREE)
 
-# List of dependencies: https://mvnrepository.com/
+# List of dependencies: https://mvnrepository.com/ goes inside the pom.xml
 - selenium-java
 - cucumber-testng
 - cucumber-java
