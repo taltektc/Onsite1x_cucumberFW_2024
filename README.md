@@ -17,3 +17,8 @@ Java, Cucumber BDD, Gherkin, CI/CD, GitHub, Maven, Git ect
 # Plugins from IntelliJ
 - Cucumber for Java
 - Gherkin
+
+# Steps by steps
+1. Create repo in GitHub
+2. Clone it into your local
+3. Create project using intelliJ IDE and ensure to point at cloned project (step 2)

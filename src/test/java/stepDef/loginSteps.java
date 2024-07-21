@@ -22,9 +22,19 @@ public class loginSteps {
         driver.findElement(By.name("email")).sendKeys("QAEnv1@gmail.com");
     }
 
+    @And("student enter their valid email address {string}")
+    public void studentEnterTheirValidEmailAddressWithDataProvider(String enterEmailAddress) {
+        driver.findElement(By.name("email")).sendKeys(enterEmailAddress);
+    }
+
     @And("student enter their valid password")
     public void studentEnterTheirValidPassword() {
         driver.findElement(By.name("password")).sendKeys("QAEnvPas$");
+    }
+
+    @And("student enter their valid password {string}")
+    public void studentEnterTheirValidPassword(String passwordValue) {
+        driver.findElement(By.name("password")).sendKeys(passwordValue);
     }
 
     @When("student clicks on Login Button from login page")
@@ -54,4 +64,17 @@ public class loginSteps {
         String act = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
         Assert.assertEquals(act, exp);
     }
+
+    @And("student enter their invalid password")
+    public void studentEnterTheirInvalidPassword() {
+        driver.findElement(By.name("password")).sendKeys("InvalidPass$32232");
+    }
+
+    @Then("student should see Incorrect email or password error message")
+    public void studentShouldSeeIncorrectEmailOrPasswordErrorMessage() {
+        String exp = "Incorrect email or password";
+        String act = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+        Assert.assertEquals(act, exp);
+    }
+
 }
