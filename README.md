@@ -14,9 +14,20 @@ Java, Cucumber BDD, Gherkin, CI/CD, GitHub, Maven, Git ect
 - cucumber-testng
 - cucumber-java
 
+# Reporting
+- JVM Report
+  - In pom.xml file - We added a block call "Build". 
+    - in that block just change the projectName value 
+
 # Plugins from IntelliJ
 - Cucumber for Java
 - Gherkin
+
+# How to run the test in CLI / Terminal using Command
+- mvn verify (it will run all test with the default browser and env)
+- mvn verify -Dbrowser=chrome -Denv=qa (it will run in Chrome browser in QA Env stage.taltektc.com)
+- mvn verify -Dbrowser=chrome -Denv=qa -Dcucumber.filter.tags=@TTek
+
 
 # Steps by steps
 1. Create repo in GitHub

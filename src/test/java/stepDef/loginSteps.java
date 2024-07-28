@@ -1,20 +1,19 @@
 package stepDef;
 
+import base.config;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 
-public class loginSteps {
-    WebDriver driver;
+public class loginSteps extends config {
+
     @Given("student at talentTEK Homepage")
     public void studentAtTalentTEKHomepage() {
-        driver = new ChromeDriver();
-        driver.get("https://qa.taltektc.com");
+       driver.get("https://qa.taltektc.com");
     }
 
     @And("student enter their valid email address")
