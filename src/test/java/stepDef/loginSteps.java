@@ -13,12 +13,18 @@ public class loginSteps extends config {
 
     @Given("student at talentTEK Homepage")
     public void studentAtTalentTEKHomepage() {
-       driver.get("https://qa.taltektc.com");
+        String exp = "Login";
+        String act = driver.getTitle();
+        Assert.assertEquals(act, exp);
     }
 
     @And("student enter their valid email address")
     public void studentEnterTheirValidEmailAddress() {
         driver.findElement(By.name("email")).sendKeys("QAEnv1@gmail.com");
+        // we can't enter hard-coded value because these value can be different env to env
+        // Example: QAEnv1@gmail.com - this email exist in qa but may not exist in stage/prod
+        // Prod email could be sachinProdTest@gmail.com
+        // Stage = StageEnv1@gmail.com
     }
 
     @And("student enter their valid email address {string}")

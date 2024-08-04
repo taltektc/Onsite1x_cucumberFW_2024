@@ -5,4 +5,3 @@ Feature: Signup
   @signup @regression @smoke
   Scenario: Student signup with invalid firstname
     And student enter their invalid firstname
-

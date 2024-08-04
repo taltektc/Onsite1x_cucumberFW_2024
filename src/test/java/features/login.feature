@@ -2,7 +2,7 @@ Feature: Login
   Background:
     Given student at talentTEK Homepage
 
-@login @regression @smoke @TTek
+@login @regression @smoke @Test
   Scenario: Student should be able to successfully login with valid credentials
     And student enter their valid email address
     And student enter their valid password

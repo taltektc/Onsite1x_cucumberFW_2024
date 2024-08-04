@@ -25,8 +25,8 @@ Java, Cucumber BDD, Gherkin, CI/CD, GitHub, Maven, Git ect
 
 # How to run the test in CLI / Terminal using Command
 - mvn verify (it will run all test with the default browser and env)
-- mvn verify -Dbrowser=chrome -Denv=qa (it will run in Chrome browser in QA Env stage.taltektc.com)
-- mvn verify -Dbrowser=chrome -Denv=qa -Dcucumber.filter.tags=@TTek
+- mvn verify -Dbrowser=chrome -Denv=qa (it will run in Chrome browser in QA Env qa.taltektc.com)
+- mvn verify -Dbrowser=chrome -Denv=qa -Dcucumber.filter.tags=@Test (it will run with particular tag)
 
 
 # Steps by steps
