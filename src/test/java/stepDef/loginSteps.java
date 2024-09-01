@@ -20,11 +20,7 @@ public class loginSteps extends config {
 
     @And("student enter their valid email address")
     public void studentEnterTheirValidEmailAddress() {
-        driver.findElement(By.name("email")).sendKeys("QAEnv1@gmail.com");
-        // we can't enter hard-coded value because these value can be different env to env
-        // Example: QAEnv1@gmail.com - this email exist in qa but may not exist in stage/prod
-        // Prod email could be sachinProdTest@gmail.com
-        // Stage = StageEnv1@gmail.com
+        driver.findElement(By.name("email")).sendKeys(studentEmail);
     }
 
     @And("student enter their valid email address {string}")
@@ -34,7 +30,7 @@ public class loginSteps extends config {
 
     @And("student enter their valid password")
     public void studentEnterTheirValidPassword() {
-        driver.findElement(By.name("password")).sendKeys("QAEnvPas$");
+        driver.findElement(By.name("password")).sendKeys(studentPassword);
     }
 
     @And("student enter their valid password {string}")

@@ -22,12 +22,16 @@ public class Hook extends config {
         switch (envType.toUpperCase()) {
             case "QA":
                 url = "https://qa.taltektc.com";
+                studentEmail = "QAEnv1@gmail.com";
+                studentPassword = "QAEnvPas$";
                 break;
             case "STAGE":
                 url = "https://stage.taltektc.com";
                 break;
             case "PROD":
                 url = "https://prod.taltektc.com";
+                studentEmail = "PRODEnv@gmail.com";
+                studentPassword = "ProdPa$$1";
                 break;
             default:
                 throw new IllegalArgumentException("Invalid environment: " + envType);
